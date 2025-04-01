@@ -17,7 +17,7 @@
 2. Make sure all required fields are in Cargo.toml:
 
    - name: "basecamp"
-   - version: "0.3.0"
+   - version: "0.1.0"
    - description: "A streamlined tool for managing multiple codebases and repositories"
    - authors: ["BaseCamp Developers"]
    - repository: Your GitHub repository URL
@@ -57,8 +57,8 @@
 
 2. Tag your GitHub repository with the published version if you haven't already:
    ```
-   git tag -a v0.3.0 -m "Release 0.3.0"
-   git push origin v0.3.0
+   git tag -a v0.1.0 -m "Release 0.1.0"
+   git push origin v0.1.0
    ```
 
 ## Verifying Publication
@@ -68,7 +68,7 @@
    ```
    cargo install basecamp
    ```
-3. Verify that the installed version is 0.3.0:
+3. Verify that the installed version is 0.1.0:
    ```
    basecamp --version
    ```

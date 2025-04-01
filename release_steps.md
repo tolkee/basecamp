@@ -1,11 +1,11 @@
-# Release Steps for BaseCamp 0.3.0
+# Release Steps for BaseCamp 0.1.0
 
 ## Completed Steps
 
-1. Updated version in Cargo.toml to 0.3.0 ✅
+1. Updated version in Cargo.toml to 0.1.0 ✅
 2. Created a CHANGELOG.md file documenting the changes ✅
-3. Committed all changes with message "Release version 0.3.0" ✅
-4. Created a tag for version 0.3.0 ✅
+3. Committed all changes with message "Release version 0.1.0" ✅
+4. Created a tag for version 0.1.0 ✅
 
 ## Steps to Complete
 
@@ -28,7 +28,7 @@ git remote add origin https://github.com/YOUR_USERNAME/basecamp.git
 git push -u origin main
 
 # Push the tag to trigger the release CI/CD workflow
-git push origin v0.3.0
+git push origin v0.1.0
 ```
 
 ### 3. Verify Release Artifacts
@@ -45,6 +45,6 @@ git push origin v0.3.0
 
 ## Notes
 
-- The GitHub Actions workflow will automatically create a release when you push the v0.3.0 tag
+- The GitHub Actions workflow will automatically create a release when you push the v0.1.0 tag
 - Make sure your GitHub repository has the necessary secrets configured for the workflow
 - The CI/CD workflow will build the release binaries for Linux, macOS, and Windows
