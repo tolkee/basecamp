@@ -4,7 +4,7 @@ version = "0.3.0"
 edition = "2024"
 description = "A streamlined tool for managing multiple codebases and repositories"
 authors = ["BaseCamp Developers"]
-repository = "https://github.com/your-org/basecamp"
+repository = "https://github.com/YOUR_USERNAME/basecamp"
 license = "MIT"
 
 [dependencies]
