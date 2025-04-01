@@ -1,5 +1,9 @@
 # BaseCamp
 
+<p align="center">
+  <img src="logo.png" alt="BaseCamp Logo" width="200"/>
+</p>
+
 A streamlined CLI tool for managing multiple codebases and repositories.
 
 BaseCamp helps you organize and work with multiple related Git repositories, making it easy to:
