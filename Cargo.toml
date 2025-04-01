@@ -1,6 +1,6 @@
 [package]
 name = "basecamp"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
 description = "A streamlined tool for managing multiple codebases and repositories"
 authors = ["BaseCamp Developers"]
