@@ -69,6 +69,46 @@ fn test_init_command() {
     common::teardown(temp_dir);
 }
 
+// Add a new test for init command in non-interactive mode
+#[test]
+fn test_init_command_no_config() {
+    // Setup - temporary directory without existing config
+    let (temp_dir, temp_path) = common::setup_temp_dir();
+    
+    // Make sure there's no .basecamp directory
+    let basecamp_dir = temp_path.join(".basecamp");
+    if basecamp_dir.exists() {
+        std::fs::remove_dir_all(&basecamp_dir).unwrap();
+    }
+    
+    // We'll use command line parameters instead of environment variables
+    let mut cmd = Command::cargo_bin("basecamp").unwrap();
+    cmd.arg("init")
+        .arg("--non-interactive")
+        .arg("--connection-type").arg("https")
+        .arg("--repo-type").arg("org")
+        .arg("--name").arg("test-org")
+        .current_dir(&temp_path);
+    
+    // Attempt to run the command - it should succeed with non-interactive mode
+    let assert = cmd.assert();
+    
+    // In non-interactive mode, it should succeed and create files
+    assert.success();
+    
+    // Verify the config files were created
+    assert!(basecamp_dir.exists());
+    assert!(basecamp_dir.join("config.yaml").exists());
+    assert!(basecamp_dir.join("codebases.yaml").exists());
+    
+    // Verify content of config.yaml
+    let config_content = std::fs::read_to_string(basecamp_dir.join("config.yaml")).unwrap();
+    assert!(config_content.contains("github_url: https://github.com/test-org"));
+    
+    // Cleanup
+    common::teardown(temp_dir);
+}
+
 #[test]
 fn test_list_without_config() {
     // Setup

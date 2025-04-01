@@ -25,7 +25,8 @@ fn main() {
 
     // Execute the requested command
     let result = match &args.command {
-        Commands::Init => commands::init(),
+        Commands::Init { connection_type, repo_type, name, non_interactive, force } => 
+            commands::init(connection_type.clone(), repo_type.clone(), name.clone(), *non_interactive, *force),
         Commands::Install { codebase, parallel } => {
             commands::install(codebase.clone(), *parallel)
         }

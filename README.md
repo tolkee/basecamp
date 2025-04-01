@@ -2,7 +2,7 @@
 
 # BaseCamp
 
-A streamlined CLI tool for managing multiple codebases and repositories.
+CLI tool that organizes and manages multiple Git repositories as cohesive codebases.
 
 BaseCamp helps you organize and work with multiple related Git repositories, making it easy to:
 

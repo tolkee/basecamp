@@ -18,7 +18,27 @@ pub struct Cli {
 #[derive(Subcommand, Debug)]
 pub enum Commands {
     /// Initialize a new BaseCamp configuration
-    Init,
+    Init {
+        /// Connection type: 'https' or 'ssh'
+        #[clap(long)]
+        connection_type: Option<String>,
+        
+        /// Repository type: 'org' or 'personal'
+        #[clap(long)]
+        repo_type: Option<String>,
+        
+        /// Organization name or GitHub username
+        #[clap(long)]
+        name: Option<String>,
+        
+        /// Non-interactive mode
+        #[clap(long)]
+        non_interactive: bool,
+        
+        /// Force overwrite existing configuration
+        #[clap(long)]
+        force: bool,
+    },
 
     /// Install all repositories for all codebases or a specific codebase
     Install {
