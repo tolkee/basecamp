@@ -22,7 +22,7 @@
 
 ```bash
 # Add the GitHub repository as a remote
-git remote add origin https://github.com/YOUR_USERNAME/basecamp.git
+git remote add origin git@github.com:tolkee/basecamp.git
 
 # Push the main branch
 git push -u origin main

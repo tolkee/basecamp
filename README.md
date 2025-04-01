@@ -1,8 +1,6 @@
-# BaseCamp
+  <img src="logo.png" alt="BaseCamp Logo" width="70"/>
 
-<p align="center">
-  <img src="logo.png" alt="BaseCamp Logo" width="200"/>
-</p>
+# BaseCamp
 
 A streamlined CLI tool for managing multiple codebases and repositories.
 
@@ -20,7 +18,7 @@ BaseCamp helps you organize and work with multiple related Git repositories, mak
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/basecamp.git
+git clone git@github.com:tolkee/basecamp.git
 cd basecamp
 
 # Build and install
@@ -40,11 +38,7 @@ We're working on providing BaseCamp through:
 ### Initialize BaseCamp
 
 ```bash
-# Initialize with interactive prompt for GitHub URL
 basecamp init
-
-# Or specify GitHub URL directly
-basecamp init --github-url https://github.com/your-org
 ```
 
 ### Add Repositories to a Codebase
@@ -101,7 +95,7 @@ The settings are stored as:
 
 ```yaml
 # config.yaml
-github_url: https://github.com/your-org
+github_url: https://github.com/tolkee
 ```
 
 ```yaml
@@ -116,17 +110,6 @@ codebases:
     - auth-service
     - database
 ```
-
-Unlike previous versions that used a single configuration file in the user's home directory, BaseCamp now uses the `.basecamp` directory in your current project folder. This allows you to have different configurations for different projects.
-
-## Features
-
-- **Colorful Terminal UI**: Rich, user-friendly interface with clear status indications
-- **Parallel Operations**: Clone multiple repositories simultaneously
-- **Safety Checks**: Detect uncommitted changes and unpushed commits before removal
-- **Interactive Prompts**: Guided setup and confirmation dialogs
-- **Progress Indicators**: Visual feedback for long-running operations
-- **Cross-Platform**: Works on Linux, macOS, and Windows
 
 ## Development
 

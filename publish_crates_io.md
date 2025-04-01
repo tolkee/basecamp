@@ -11,7 +11,7 @@
 1. Update your GitHub username in Cargo.toml:
 
    ```toml
-   repository = "https://github.com/YOUR_USERNAME/basecamp"
+   repository = "https://github.com/tolkee/basecamp"
    ```
 
 2. Make sure all required fields are in Cargo.toml:
