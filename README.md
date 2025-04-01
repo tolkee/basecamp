@@ -20,7 +20,7 @@ BaseCamp helps you organize and work with multiple related Git repositories, mak
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/basecamp.git
+git clone git@github.com:tolkee/basecamp.git
 cd basecamp
 
 # Build and install
@@ -44,7 +44,7 @@ We're working on providing BaseCamp through:
 basecamp init
 
 # Or specify GitHub URL directly
-basecamp init --github-url https://github.com/your-org
+basecamp init --github-url https://github.com/tolkee
 ```
 
 ### Add Repositories to a Codebase
@@ -101,7 +101,7 @@ The settings are stored as:
 
 ```yaml
 # config.yaml
-github_url: https://github.com/your-org
+github_url: https://github.com/tolkee
 ```
 
 ```yaml
